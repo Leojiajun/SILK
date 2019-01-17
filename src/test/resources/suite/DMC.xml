@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="DMC" >
+  <test name="DMC">
+    <classes >
+      <class name="com.silk.leo.Product.DMC"/>
+     </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

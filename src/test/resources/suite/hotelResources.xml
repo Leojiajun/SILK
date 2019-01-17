@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="houseResources" >
+  <test name="houseResources">
+    <classes >
+      <class name="com.silk.leo.Product.hotelResources"/>
+     </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
