@@ -101,7 +101,7 @@ public class productList extends BaseTest{
 		Selenium.waitFor(2000);
 		Selenium.buttonInDB("productlist_add_budgetarycontrol_yes", "product", driver);
 		((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)"); //下拉到页面底部
-		Selenium.waitFor(2000);
+		Selenium.waitFor(3000);
 		Selenium.buttonInDB("product_add_budgetarycontrol_surebtn", "product", driver);
 		Selenium.waitFor(1000);
 		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
