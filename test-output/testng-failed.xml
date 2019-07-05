@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.silk.leo.Product.productList">
+      <class name="com.silk.leo.Product.hotelResources">
         <methods>
           <include name="conect"/>
           <include name="loadDriver"/>
-          <include name="modifyProduct"/>
           <include name="closeDB"/>
           <include name="closeBrowser"/>
+          <include name="addHotelResources"/>
         </methods>
-      </class> <!-- com.silk.leo.Product.productList -->
+      </class> <!-- com.silk.leo.Product.hotelResources -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

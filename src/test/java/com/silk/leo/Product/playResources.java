@@ -38,6 +38,9 @@ public class playResources extends BaseTest{
 		Selenium.waitFor(2000);
 		Selenium.buttonInDB("play_playresources_add_cansell", "play", driver);
 		Selenium.waitFor(2000);
+		Selenium.inputInDB("play_playresources_add_packagename", "play", "packagename"+Selenium.getRandomString(5), driver);
+		Selenium.inputInDB("play_playresources_add_packagecode", "play", "packagename"+Selenium.getRandomString(5), driver);
+		Selenium.buttonInDB("play_playresources_add_peopletype", "play", driver);
 		Selenium.removeAttribute(driver,Selenium.findElementInDB("play_playresources_add_saleStartDate", "play", driver), "readonly");
 		Selenium.inputInDB("play_playresources_add_saleStartDate", "play", Selenium.getTodayYYMMDD(), driver);
 		Selenium.waitFor(2000);

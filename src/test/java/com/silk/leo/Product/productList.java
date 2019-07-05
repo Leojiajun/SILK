@@ -3,6 +3,7 @@ package com.silk.leo.Product;
 import java.sql.SQLException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -17,19 +18,20 @@ public class productList extends BaseTest{
 	 * 搜索全部产品
 	 * @throws SQLException
 	 */
+	
 	@Test(priority=1,description = "搜索所有产品信息")
 	public void searchProduct() throws SQLException{
 		Selenium.buttonInDB("productbtn", "product", driver);
 		Selenium.buttonInDB("packagebtn", "product", driver);
 		Selenium.buttonInDB("productlistbtn", "product", driver);
-		Selenium.buttonInDB("productlist_searchbox_searchbtn", "product", driver);
-		Selenium.waitFor(15000);
+		//Selenium.buttonInDB("productlist_searchbox_searchbtn", "product", driver);
+		//Selenium.waitFor(15000);
 		//验证搜索结果
-		String testsearchsuccess = Selenium.findElementInDB("productlist_list_numberbtn", "product", driver).getText().replace(" ","");
-		Assert.assertTrue(testsearchsuccess.contains("1"));	
+		//String testsearchsuccess = Selenium.findElementInDB("productlist_list_numberbtn", "product", driver).getText().replace(" ","");
+		//Assert.assertTrue(testsearchsuccess.contains("1"));	
 	}
 	
-	//@Test(priority=2,description = "新建自由行产品")
+	@Test(priority=2,description = "新建自由行产品")
 	public void addProduct_freewalker() throws SQLException{
 		Selenium.buttonInDB("productlist_add", "product", driver);
 		Selenium.waitFor(3000);
@@ -98,7 +100,8 @@ public class productList extends BaseTest{
 		Selenium.inputInDB("productlist_add_budgetarycontrol_advanceTime", "product", "0000", driver);
 		Selenium.waitFor(2000);
 		Selenium.buttonInDB("productlist_add_budgetarycontrol_yes", "product", driver);
-		Selenium.waitFor(1000);
+		((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)"); //下拉到页面底部
+		Selenium.waitFor(2000);
 		Selenium.buttonInDB("product_add_budgetarycontrol_surebtn", "product", driver);
 		Selenium.waitFor(1000);
 		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
@@ -156,28 +159,28 @@ public class productList extends BaseTest{
 		Selenium.buttonInDB("product_add_Refundpolicy_new_add2_canback", "product", driver);
 		Selenium.buttonInDB("product_add_Refundpolicy_new_add2_save", "product", driver);
 		Selenium.waitFor(2000);
-		//价格库存
-		Selenium.buttonInDB("modifyproduct_ priceofinventory", "product", driver);
-		Selenium.waitFor(3000);
-		Selenium.buttonInDB("product_add_ priceofinventory_add", "product", driver);
-		Selenium.waitFor(2000);
-		Selenium.inputInDB("product_add_ priceofinventory_add_enddata", "product", "2020-12-30", driver);
-		Selenium.inputInDB("product_add_ priceofinventory_add_addrepertory", "product", "100", driver);
-		Selenium.buttonInDB("product_add_ priceofinventory_add_addrepertorybtn", "product", driver);
-		Selenium.waitFor(2000);
-		Selenium.inputInDB("product_add_ priceofinventory_add_suggestAdult", "product", "1000", driver);
-		Selenium.inputInDB("product_add_ priceofinventory_add_suggestChild", "product", "1000", driver);
-		Selenium.inputInDB("product_add_ priceofinventory_add_suggestBaby", "product", "0", driver);
-		Selenium.inputInDB("product_add_ priceofinventory_add_suggestSingleSupplement", "product", "500", driver);
-		Selenium.waitFor(2000);
-		Selenium.inputInDB("product_add_ priceofinventory_add_saleAdult", "product", "1000", driver);
-		Selenium.inputInDB("product_add_ priceofinventory_add_saleChild", "product", "1000", driver);
-		Selenium.inputInDB("product_add_ priceofinventory_add_saleBaby", "product", "0", driver);
-		Selenium.inputInDB("product_add_ priceofinventory_add_singleSupplement", "product", "500", driver);
-		Selenium.waitFor(1000);
-		Selenium.buttonInDB("product_add_ priceofinventory_add_savebtn", "product", driver);
-		Selenium.waitFor(10000);
-		Assert.assertTrue(driver.getPageSource().contains("库存"));
+//		//价格库存
+//		Selenium.buttonInDB("modifyproduct_ priceofinventory", "product", driver);
+//		Selenium.waitFor(3000);
+//		Selenium.buttonInDB("product_add_ priceofinventory_add", "product", driver);
+//		Selenium.waitFor(2000);
+//		Selenium.inputInDB("product_add_ priceofinventory_add_enddata", "product", "2020-12-30", driver);
+//		Selenium.inputInDB("product_add_ priceofinventory_add_addrepertory", "product", "100", driver);
+//		Selenium.buttonInDB("product_add_ priceofinventory_add_addrepertorybtn", "product", driver);
+//		Selenium.waitFor(2000);
+//		Selenium.inputInDB("product_add_ priceofinventory_add_suggestAdult", "product", "1000", driver);
+//		Selenium.inputInDB("product_add_ priceofinventory_add_suggestChild", "product", "1000", driver);
+//		Selenium.inputInDB("product_add_ priceofinventory_add_suggestBaby", "product", "0", driver);
+//		Selenium.inputInDB("product_add_ priceofinventory_add_suggestSingleSupplement", "product", "500", driver);
+//		Selenium.waitFor(2000);
+//		Selenium.inputInDB("product_add_ priceofinventory_add_saleAdult", "product", "1000", driver);
+//		Selenium.inputInDB("product_add_ priceofinventory_add_saleChild", "product", "1000", driver);
+//		Selenium.inputInDB("product_add_ priceofinventory_add_saleBaby", "product", "0", driver);
+//		Selenium.inputInDB("product_add_ priceofinventory_add_singleSupplement", "product", "500", driver);
+//		Selenium.waitFor(1000);
+//		Selenium.buttonInDB("product_add_ priceofinventory_add_savebtn", "product", driver);
+//		Selenium.waitFor(10000);
+//		Assert.assertTrue(driver.getPageSource().contains("库存"));
 		//优惠活动
 		Selenium.buttonInDB("modifyproduct_ promotion", "product", driver);
 		Selenium.waitFor(3000);
@@ -207,7 +210,7 @@ public class productList extends BaseTest{
 		
 	}
 	
-	//@Test(priority=3,description = "新建跟团游产品")
+	@Test(priority=3,description = "新建跟团游产品")
 	public void addPackageTour() throws SQLException{
 		Selenium.buttonInDB("productlistbtn", "product", driver);
 		Selenium.buttonInDB("productlist_add", "product", driver);
@@ -337,27 +340,27 @@ public class productList extends BaseTest{
 		Selenium.buttonInDB("product_add_Refundpolicy_new_add2_save", "product", driver);
 		Selenium.waitFor(2000);
 		//价格库存
-		Selenium.buttonInDB("modifyproduct_ priceofinventory", "product", driver);
-		Selenium.waitFor(3000);
-		Selenium.buttonInDB("product_add_ priceofinventory_add", "product", driver);
-		Selenium.waitFor(2000);
-		Selenium.inputInDB("product_add_ priceofinventory_add_enddata", "product", "2020-12-30", driver);
-		Selenium.inputInDB("product_add_ priceofinventory_add_addrepertory", "product", "100", driver);
-		Selenium.buttonInDB("product_add_ priceofinventory_add_addrepertorybtn", "product", driver);
-		Selenium.waitFor(2000);
-		Selenium.inputInDB("product_add_ priceofinventory_add_suggestAdult", "product", "1000", driver);
-		Selenium.inputInDB("product_add_ priceofinventory_add_suggestChild", "product", "1000", driver);
-		Selenium.inputInDB("product_add_ priceofinventory_add_suggestBaby", "product", "0", driver);
-		Selenium.inputInDB("product_add_ priceofinventory_add_suggestSingleSupplement", "product", "500", driver);
-		Selenium.waitFor(2000);
-		Selenium.inputInDB("product_add_ priceofinventory_add_saleAdult", "product", "1000", driver);
-		Selenium.inputInDB("product_add_ priceofinventory_add_saleChild", "product", "1000", driver);
-		Selenium.inputInDB("product_add_ priceofinventory_add_saleBaby", "product", "0", driver);
-		Selenium.inputInDB("product_add_ priceofinventory_add_singleSupplement", "product", "500", driver);
-		Selenium.waitFor(1000);
-		Selenium.buttonInDB("product_add_ priceofinventory_add_savebtn", "product", driver);
-		Selenium.waitFor(10000);
-		Assert.assertTrue(driver.getPageSource().contains("库存"));
+//		Selenium.buttonInDB("modifyproduct_ priceofinventory", "product", driver);
+//		Selenium.waitFor(3000);
+//		Selenium.buttonInDB("product_add_ priceofinventory_add", "product", driver);
+//		Selenium.waitFor(2000);
+//		Selenium.inputInDB("product_add_ priceofinventory_add_enddata", "product", "2020-12-30", driver);
+//		Selenium.inputInDB("product_add_ priceofinventory_add_addrepertory", "product", "100", driver);
+//		Selenium.buttonInDB("product_add_ priceofinventory_add_addrepertorybtn", "product", driver);
+//		Selenium.waitFor(2000);
+//		Selenium.inputInDB("product_add_ priceofinventory_add_suggestAdult", "product", "1000", driver);
+//		Selenium.inputInDB("product_add_ priceofinventory_add_suggestChild", "product", "1000", driver);
+//		Selenium.inputInDB("product_add_ priceofinventory_add_suggestBaby", "product", "0", driver);
+//		Selenium.inputInDB("product_add_ priceofinventory_add_suggestSingleSupplement", "product", "500", driver);
+//		Selenium.waitFor(2000);
+//		Selenium.inputInDB("product_add_ priceofinventory_add_saleAdult", "product", "1000", driver);
+//		Selenium.inputInDB("product_add_ priceofinventory_add_saleChild", "product", "1000", driver);
+//		Selenium.inputInDB("product_add_ priceofinventory_add_saleBaby", "product", "0", driver);
+//		Selenium.inputInDB("product_add_ priceofinventory_add_singleSupplement", "product", "500", driver);
+//		Selenium.waitFor(1000);
+//		Selenium.buttonInDB("product_add_ priceofinventory_add_savebtn", "product", driver);
+//		Selenium.waitFor(10000);
+//		Assert.assertTrue(driver.getPageSource().contains("库存"));
 		//优惠活动
 		Selenium.buttonInDB("modifyproduct_ promotion", "product", driver);
 		Selenium.waitFor(3000);
@@ -391,7 +394,7 @@ public class productList extends BaseTest{
 	 * 按产品id搜索
 	 * @throws SQLException
 	 */
-	@Test(priority=4,description = "按产品id查询")
+	//@Test(priority=4,description = "按产品id查询")
 	public void searchProductByproID() throws SQLException{
 		Selenium.buttonInDB("productbtn", "product", driver);
 		Selenium.buttonInDB("packagebtn", "product", driver);
@@ -404,7 +407,7 @@ public class productList extends BaseTest{
 		Assert.assertTrue(testsearchsuccess2.contains(productid));	
 	}
 	
-	@Test(priority=5,description = "产品修改")
+	//@Test(priority=5,description = "产品修改")
 	public void modifyProduct() throws SQLException{
 		String subTitle=Selenium.getToday();//产品副标题
 		Selenium.buttonInDB("productlist_list_modify", "product", driver);

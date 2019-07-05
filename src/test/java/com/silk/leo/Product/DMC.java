@@ -73,6 +73,7 @@ public class DMC extends BaseTest{
 		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
 		//价格库存
 		Selenium.buttonInDB("DMCrsources_add_priceinventory", "DMC", driver);
+		Selenium.waitFor(2000);
 		Selenium.buttonInDB("DMCrsources_add_priceinventory_batchoperation", "DMC", driver);
 		Selenium.waitFor(2000);
 		Selenium.inputInDB("DMCrsources_add_priceinventory_batchoperation_startdate", "DMC", "2018-11-01", driver);

@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\leo.wu\AppData\Local\Temp\testng-eclipse--1587740406\testng-customsuite.xml</span>
+                    <span>C:\Users\leo.wu\AppData\Local\Temp\testng-eclipse-879283781\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,22 +101,17 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.silk.leo.Product.productList" hash-for-method="loginSilk">loginSilk</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.silk.leo.Product.playResources" hash-for-method="addPlayResources">addPlayResources</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.silk.leo.Product.productList" hash-for-method="modifyProduct">modifyProduct</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.silk.leo.Product.playResources" hash-for-method="loginSilk">loginSilk</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.silk.leo.Product.productList" hash-for-method="searchProduct">searchProduct</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.silk.leo.Product.productList" hash-for-method="searchProductByproID">searchProductByproID</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.silk.leo.Product.playResources" hash-for-method="searchPlayResources">searchPlayResources</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -134,9 +129,18 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.silk.leo.Product.productList</span>
+              <span class="class-name">com.silk.leo.Product.playResources</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addPlayResources">
+                  </a> <!-- addPlayResources -->
+                  <span class="method-name">addPlayResources</span>
+                  <em>
+(新建玩乐资源)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="loginSilk">
@@ -146,29 +150,11 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="modifyProduct">
-                  </a> <!-- modifyProduct -->
-                  <span class="method-name">modifyProduct</span>
+                  <a name="searchPlayResources">
+                  </a> <!-- searchPlayResources -->
+                  <span class="method-name">searchPlayResources</span>
                   <em>
-(产品修改)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="searchProduct">
-                  </a> <!-- searchProduct -->
-                  <span class="method-name">searchProduct</span>
-                  <em>
-(搜索所有产品信息)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="searchProductByproID">
-                  </a> <!-- searchProductByproID -->
-                  <span class="method-name">searchProductByproID</span>
-                  <em>
-(按产品id查询)                  </em>
+(搜索全部玩乐资源)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -176,7 +162,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\leo.wu\AppData\Local\Temp\testng-eclipse--1587740406\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\leo.wu\AppData\Local\Temp\testng-eclipse-879283781\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -185,7 +171,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.silk.leo.Product.productList&quot;/&gt;
+      &lt;class name=&quot;com.silk.leo.Product.playResources&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -225,23 +211,19 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'modifyProduct')
-data.setCell(0, 2, 'com.silk.leo.Product.productList')
-data.setCell(0, 3, 62063);
+data.setCell(0, 1, 'addPlayResources')
+data.setCell(0, 2, 'com.silk.leo.Product.playResources')
+data.setCell(0, 3, 62352);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'searchProduct')
-data.setCell(1, 2, 'com.silk.leo.Product.productList')
-data.setCell(1, 3, 17686);
+data.setCell(1, 1, 'searchPlayResources')
+data.setCell(1, 2, 'com.silk.leo.Product.playResources')
+data.setCell(1, 3, 8595);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'searchProductByproID')
-data.setCell(2, 2, 'com.silk.leo.Product.productList')
-data.setCell(2, 3, 10009);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'loginSilk')
-data.setCell(3, 2, 'com.silk.leo.Product.productList')
-data.setCell(3, 3, 1121);
+data.setCell(2, 1, 'loginSilk')
+data.setCell(2, 2, 'com.silk.leo.Product.playResources')
+data.setCell(2, 3, 1330);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -272,38 +254,34 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.silk.leo.Product.productList</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.silk.leo.Product.playResources</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">conect</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">loadDriver</span>
-                <span class="method-start">240 ms</span>
+                <span class="method-start">264 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">loginSilk</span>
-                <span class="method-start">3760 ms</span>
+                <span class="method-start">3948 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">searchProduct</span>
-                <span class="method-start">4883 ms</span>
+                <span class="method-name">searchPlayResources</span>
+                <span class="method-start">5281 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">searchProductByproID</span>
-                <span class="method-start">22570 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">modifyProduct</span>
-                <span class="method-start">32580 ms</span>
+                <span class="method-name">addPlayResources</span>
+                <span class="method-start">13877 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">94644 ms</span>
+                <span class="method-start">76232 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-class after">
                 <span class="method-name">closeDB</span>
-                <span class="method-start">95713 ms</span>
+                <span class="method-start">77473 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

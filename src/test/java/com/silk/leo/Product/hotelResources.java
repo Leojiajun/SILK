@@ -2,9 +2,11 @@ package com.silk.leo.Product;
 
 import java.sql.SQLException;
 
+import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.comcast.video.stbio.Key;
 import com.silk.leo.integration.BaseTest;
 import com.silk.leo.util.Selenium;
 
@@ -42,7 +44,7 @@ public class hotelResources extends BaseTest{
 	public void addHotelResources() throws SQLException{
 		Selenium.buttonInDB("hotelresources_add", "hotel", driver);
 		Selenium.waitFor(3000);
-		Assert.assertTrue(driver.getPageSource().contains("售卖信息"));
+		Assert.assertTrue(driver.getPageSource().contains("售卖信息"));	
 		Selenium.inputInDB("hotelresources_add_resourcesname", "hotel", "resources"+Selenium.getRandomString(5), driver);
 		Selenium.inputInDB("hotelresources_add_hotelid", "hotel", hotelid, driver);
 		Selenium.waitFor(2000);
@@ -53,9 +55,12 @@ public class hotelResources extends BaseTest{
 		Selenium.buttonInDB("hotelresources_add_compact", "hotel", driver);
 		Selenium.waitFor(2000);
 		Selenium.buttonInDB("hotelresources_add_compact_choice", "hotel", driver);
-		Selenium.buttonInDB("hotelresources_add_manage", "hotel", driver);
+//		Selenium.buttonInDB("hotelresources_add_manage", "hotel", driver);
+		Selenium.inputInDB("hotelresources_add_manage", "hotel", "00T008", driver);
 		Selenium.waitFor(2000);
-		Selenium.buttonInDB("hotelresources_add_manage_choice", "hotel", driver);
+		Selenium.findElementInDB("hotelresources_add_manage", "hotel", driver).sendKeys(Keys.ENTER);
+		Selenium.waitFor(2000);
+//		Selenium.buttonInDB("hotelresources_add_manage_choice", "hotel", driver);
 		Selenium.select("hotelresources_add_resourcesattribute", "hotel", "自签", driver);
 		Selenium.buttonInDB("hotelresources_add_saleyes", "hotel", driver);
 		//售卖信息
@@ -65,7 +70,7 @@ public class hotelResources extends BaseTest{
 		Selenium.waitFor(2000);
 		Selenium.buttonInDB("hotelresources_add_saleenddata", "hotel", driver);
 		Selenium.waitFor(2000);
-		Selenium.inputInDB("hotelresources_add_saleenddata", "hotel", "2018-12-31", driver);
+		Selenium.inputInDB("hotelresources_add_saleenddata", "hotel", "2020-12-31", driver);
 		Selenium.waitFor(2000);
 		Selenium.select("hotelresources_add_saleCurrency", "hotel", "RMB", driver);
 		Selenium.select("hotelresources_add_baseCurrency", "hotel", "RMB", driver);
