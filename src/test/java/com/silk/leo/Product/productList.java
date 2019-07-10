@@ -94,10 +94,13 @@ public class productList extends BaseTest{
 		Selenium.waitFor(1000);
 		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
 		//预订控制
-		Selenium.buttonInDB("modifyproduct_budgetarycontrol", "product", driver);
 		Selenium.waitFor(1000);
+		Selenium.buttonInDB("modifyproduct_budgetarycontrol", "product", driver);
+		Selenium.waitFor(2000);
 		Selenium.inputInDB("productlist_add_budgetarycontrol_advanceDays", "product", "0", driver);
+		Selenium.waitFor(1000);
 		Selenium.inputInDB("productlist_add_budgetarycontrol_advanceTime", "product", "0000", driver);
+		Selenium.findElementInDB("productlist_add_budgetarycontrol_advanceTim", "product", driver).sendKeys(Keys.ENTER);
 		Selenium.waitFor(2000);
 		Selenium.buttonInDB("productlist_add_budgetarycontrol_yes", "product", driver);
 		((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)"); //下拉到页面底部
@@ -138,9 +141,9 @@ public class productList extends BaseTest{
 		Selenium.buttonInDB("product_add_Associatedresources_add_Resourceoperation__search", "product", driver);
 		Selenium.waitFor(2000);
 		Selenium.buttonInDB("product_add_Associatedresources_add_Resourceoperation__choice", "product", driver);
-		Selenium.waitFor(1000);
+		Selenium.waitFor(2000);
 		Selenium.buttonInDB("product_add_Associatedresources_add_Resourceoperation__yes", "product", driver);
-		Selenium.waitFor(1000);
+		Selenium.waitFor(2000);
 		Selenium.inputInDB("product_add_Associatedresources_add_Resourceoperation__usetime", "product", "3", driver);
 		Selenium.waitFor(1000);
 		Selenium.buttonInDB("product_add_Associatedresources_add_Resourceoperation__savebtn", "product", driver);
