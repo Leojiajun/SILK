@@ -61,16 +61,14 @@ public class DMC extends BaseTest{
 		Selenium.buttonInDB("DMCrsources_add_add1", "DMC", driver);
 		Selenium.waitFor(1000);
 		Selenium.buttonInDB("DMCrsources_add_add1_tdno", "DMC", driver);
+		Selenium.waitFor(2000);
 		Selenium.buttonInDB("DMCrsources_add_add1_savebtn", "DMC", driver);
-		Selenium.waitFor(1000);
-		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
-		Selenium.waitFor(1000);
+		Selenium.waitFor(6000);
 		Selenium.buttonInDB("DMCrsources_add_add2", "DMC", driver);
-		Selenium.waitFor(1000);
+		Selenium.waitFor(3000);
 		Selenium.buttonInDB("DMCrsources_add_add2_tdno", "DMC", driver);
 		Selenium.buttonInDB("DMCrsources_add_add2_savebtn", "DMC", driver);
-		Selenium.waitFor(1000);
-		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
+		Selenium.waitFor(6000);
 		//价格库存
 		Selenium.buttonInDB("DMCrsources_add_priceinventory", "DMC", driver);
 		Selenium.waitFor(2000);

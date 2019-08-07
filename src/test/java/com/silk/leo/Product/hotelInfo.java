@@ -36,7 +36,9 @@ public class hotelInfo extends BaseTest{
 		Selenium.waitFor(2000);
 		Selenium.buttonInDB("hotel_add_city_choiceone", "hotel", driver);
 		Selenium.buttonInDB("hotel_add_basicinfo_save", "hotel", driver);
-		Selenium.waitFor(500);
+		Selenium.waitFor(3000);
+		Selenium.buttonInDB("hotel_add_basicinfo_save", "hotel", driver);
+		Selenium.waitFor(1000);
 		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
 		Selenium.waitFor(2000);
 		//酒店介绍

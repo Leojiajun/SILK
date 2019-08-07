@@ -55,16 +55,16 @@ public class playResources extends BaseTest{
 		Selenium.waitFor(3000);
 		//退改政策
 		Selenium.buttonInDB("play_playresources_add_Refundpolicy", "play", driver);
-		Selenium.waitFor(3000);
+		Selenium.waitFor(6000);
 		Selenium.buttonInDB("play_playresources_add_Refundpolicy_add1", "play", driver);
-		Selenium.waitFor(3000);
+		Selenium.waitFor(6000);
 		Selenium.buttonInDB("play_playresources_add_Refundpolicy_add1_save", "play", driver);
-		Selenium.waitFor(3000);
+		Selenium.waitFor(6000);
 		//Selenium.buttonInDB("play_playresources_add_Refundpolicy_add2", "play", driver);
 		Selenium.mouseClickInDB("play_playresources_add_Refundpolicy_add2", "play", driver);
-		Selenium.waitFor(3000);
+		Selenium.waitFor(6000);
 		Selenium.buttonInDB("play_playresources_add_Refundpolicy_add2_save", "play", driver);
-		Selenium.waitFor(3000);
+		Selenium.waitFor(6000);
 		//价格库存
 		Selenium.buttonInDB("play_playresources_add_priceofinventory", "play", driver);
 		Selenium.waitFor(3000);
@@ -77,26 +77,32 @@ public class playResources extends BaseTest{
 		Selenium.inputInDB("play_playresources_add_priceofinventory_batch_baseAdult", "play", "100", driver);
 		Selenium.inputInDB("play_playresources_add_priceofinventory_batch_saleAdult", "play", "200", driver);
 		Selenium.buttonInDB("play_playresources_add_priceofinventory_batch_save", "play", driver);
-		Selenium.waitFor(8000);
+		Selenium.waitFor(10000);
 		Assert.assertTrue(driver.getPageSource().contains("库存"));
 		//预定控制信息
 		Selenium.buttonInDB("play_playresources_add_budgetary", "play", driver);
-		Selenium.waitFor(1000);
+		Selenium.waitFor(2000);
 		Selenium.buttonInDB("play_playresources_add_budgetary_save", "play", driver);
 		Selenium.waitFor(1000);
 		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
+		Selenium.waitFor(2000);
 		//预定人员控制
 		Selenium.buttonInDB("play_playresources_add_personnelcontrol", "play", driver);
+		Selenium.waitFor(4000);
 		Selenium.buttonInDB("play_playresources_add_personnelcontrol_add", "play", driver);
+		Selenium.waitFor(2000);
 		Selenium.select("play_playresources_add_personnelcontrol_add_name", "play", "Gender", driver);
 		Selenium.inputInDB("play_playresources_add_personnelcontrol_add_description", "play", "test", driver);
 		Selenium.waitFor(1000);
 		Selenium.buttonInDB("play_playresources_add_personnelcontrol_add_save", "play", driver);
 		Selenium.waitFor(1000);
 		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
+		Selenium.waitFor(2000);
 		//预定时间控制
 		Selenium.buttonInDB("play_playresources_add_time", "play", driver);
+		Selenium.waitFor(4000);
 		Selenium.buttonInDB("play_playresources_add_time_add", "play", driver);
+		Selenium.waitFor(2000);
 		Selenium.inputInDB("play_playresources_add_time_add_starttime", "play", "08:00", driver);
 		Selenium.waitFor(1000);
 		Selenium.inputInDB("play_playresources_add_time_add_endtime", "play", "20:00", driver);

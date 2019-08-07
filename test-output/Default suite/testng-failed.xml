@@ -8,6 +8,7 @@
           <include name="conect"/>
           <include name="loadDriver"/>
           <include name="addProduct_freewalker"/>
+          <include name="addPackageTour"/>
           <include name="closeDB"/>
           <include name="closeBrowser"/>
         </methods>

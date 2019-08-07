@@ -2,9 +2,11 @@ package com.silk.leo.Product;
 
 import java.sql.SQLException;
 
+import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.comcast.video.stbio.Key;
 import com.silk.leo.integration.BaseTest;
 import com.silk.leo.util.Selenium;
 
@@ -31,7 +33,7 @@ public class houseType extends BaseTest{
 		Selenium.buttonInDB("housetype_add", "hotel", driver);
 		Selenium.inputInDB("housetype_add_housename", "hotel", "house"+Selenium.getRandomString(5), driver);
 		Selenium.inputInDB("housetype_add_hotelID", "hotel", hotelid, driver);
-		Selenium.waitFor(3000);
+		Selenium.waitFor(1000);       
 		Selenium.buttonInDB("housetype_add_choiceonehotel", "hotel", driver);
 		Selenium.inputInDB("housetype_add_maxcheckinpeople", "hotel", "2", driver);
 		Selenium.buttonInDB("housetype_add_HotelBedType", "hotel", driver);
@@ -45,7 +47,9 @@ public class houseType extends BaseTest{
 		Selenium.waitFor(2000);
 		Selenium.buttonInDB("housetype_add_bedtypelist_doublebed", "hotel", driver);
 		Selenium.buttonInDB("housetype_add_info_savebtn", "hotel", driver);
-		Selenium.waitFor(500);
+		Selenium.waitFor(3000);
+		Selenium.buttonInDB("housetype_add_info_savebtn", "hotel", driver);
+		Selenium.waitFor(1000);
 		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
 		Selenium.waitFor(2000);
 		Selenium.buttonInDB("housetype_add_pictureinfo", "hotel", driver);
