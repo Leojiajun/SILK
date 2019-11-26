@@ -55,6 +55,7 @@
 							</includes>
 							<suiteXmlFiles> 						
 							<suiteXmlFile>src/test/resources/suite/productList.xml</suiteXmlFile>
+							<suiteXmlFile>src/test/resources/suite/flight.xml</suiteXmlFile>
 						    <suiteXmlFile>src/test/resources/suite/hotelinfo.xml</suiteXmlFile>
 							<suiteXmlFile>src/test/resources/suite/houseType.xml</suiteXmlFile>
 							<suiteXmlFile>src/test/resources/suite/hotelResources.xml</suiteXmlFile>

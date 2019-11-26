@@ -16,8 +16,9 @@ public class houseType extends BaseTest{
 		Selenium.buttonInDB("productbtn", "product", driver);
 		Selenium.buttonInDB("hotel", "hotel", driver);
 		Selenium.buttonInDB("housetype", "hotel", driver);
+		Selenium.waitFor(3000);
 		Selenium.buttonInDB("housetype_search", "hotel", driver);
-		Selenium.waitFor(15000);
+		Selenium.waitFor(20000);
 		Assert.assertTrue(driver.getPageSource().contains("资源信息"));
 	}
 	
@@ -26,14 +27,15 @@ public class houseType extends BaseTest{
 		Selenium.buttonInDB("productbtn", "product", driver);
 		Selenium.buttonInDB("hotel", "hotel", driver);
 		Selenium.buttonInDB("hotel_hotelinfo", "hotel", driver);
+		Selenium.waitFor(2000);
 		Selenium.buttonInDB("hotel_hotelinfo_search", "hotel", driver);
-		Selenium.waitFor(10000);
+		Selenium.waitFor(20000);
 		String hotelid = Selenium.findElementInDB("hotel_hotelinfo_firstid", "hotel", driver).getText().replace(" ", "");
 		Selenium.buttonInDB("housetype", "hotel", driver);
 		Selenium.buttonInDB("housetype_add", "hotel", driver);
 		Selenium.inputInDB("housetype_add_housename", "hotel", "house"+Selenium.getRandomString(5), driver);
 		Selenium.inputInDB("housetype_add_hotelID", "hotel", hotelid, driver);
-		Selenium.waitFor(1000);       
+		Selenium.waitFor(500);       
 		Selenium.buttonInDB("housetype_add_choiceonehotel", "hotel", driver);
 		Selenium.inputInDB("housetype_add_maxcheckinpeople", "hotel", "2", driver);
 		Selenium.buttonInDB("housetype_add_HotelBedType", "hotel", driver);
@@ -49,7 +51,7 @@ public class houseType extends BaseTest{
 		Selenium.buttonInDB("housetype_add_info_savebtn", "hotel", driver);
 		Selenium.waitFor(3000);
 		Selenium.buttonInDB("housetype_add_info_savebtn", "hotel", driver);
-		Selenium.waitFor(1000);
+		Selenium.waitFor(500);
 		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
 		Selenium.waitFor(2000);
 		Selenium.buttonInDB("housetype_add_pictureinfo", "hotel", driver);

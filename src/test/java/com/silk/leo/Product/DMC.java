@@ -80,6 +80,8 @@ public class DMC extends BaseTest{
 		Selenium.buttonInDB("DMCrsources_add_priceinventory_batchoperation_addrepertorybtn", "DMC", driver);
 		Selenium.inputInDB("DMCrsources_add_priceinventory_batchoperation_baseAdult", "DMC", "100", driver);
 		Selenium.inputInDB("DMCrsources_add_priceinventory_batchoperation_saleAdult", "DMC", "200", driver);
+		Selenium.inputInDB("DMCrsources_add_priceinventory_batchoperation_baseChild", "DMC", "50", driver);
+		Selenium.inputInDB("DMCrsources_add_priceinventory_batchoperation_saleChild", "DMC", "50", driver);
 		Selenium.buttonInDB("DMCrsources_add_priceinventory_batchoperation_savebtn", "DMC", driver);
 		Selenium.waitFor(8000);
 		Assert.assertTrue(driver.getPageSource().contains("库存"));

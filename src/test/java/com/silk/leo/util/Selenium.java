@@ -65,7 +65,7 @@ public class Selenium {
 	 * @param localtername
 	 * @param tablename
 	 * @param driver
-	 * @return driver.findelemrnt
+	 * @return driver.findelement
 	 * @throws ClassNotFoundException
 	 * @throws SQLException
 	 */

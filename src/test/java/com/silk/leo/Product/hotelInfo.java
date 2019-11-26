@@ -16,8 +16,9 @@ public class hotelInfo extends BaseTest{
 		Selenium.buttonInDB("productbtn", "product", driver);
 		Selenium.buttonInDB("hotel", "hotel", driver);
 		Selenium.buttonInDB("hotel_hotelinfo", "hotel", driver);
+		Selenium.waitFor(2000);
 		Selenium.buttonInDB("hotel_hotelinfo_search", "hotel", driver);
-		Selenium.waitFor(15000);
+		Selenium.waitFor(20000);
 		Assert.assertTrue(driver.getPageSource().contains("房型管理"));
 	}
 	@Test(priority=2,description = "新建酒店")
@@ -38,7 +39,7 @@ public class hotelInfo extends BaseTest{
 		Selenium.buttonInDB("hotel_add_basicinfo_save", "hotel", driver);
 		Selenium.waitFor(3000);
 		Selenium.buttonInDB("hotel_add_basicinfo_save", "hotel", driver);
-		Selenium.waitFor(1000);
+		Selenium.waitFor(800);
 		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
 		Selenium.waitFor(2000);
 		//酒店介绍
@@ -89,7 +90,7 @@ public class hotelInfo extends BaseTest{
 		//回到酒店信息主页
 		Selenium.buttonInDB("hotel_hotelinfo", "hotel", driver);
 		Selenium.buttonInDB("hotel_hotelinfo_search", "hotel", driver);
-		Selenium.waitFor(10000);
+		Selenium.waitFor(20000);
 		Assert.assertTrue(driver.getPageSource().contains(hotelname));
 	}
 }

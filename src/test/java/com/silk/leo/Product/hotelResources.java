@@ -18,26 +18,29 @@ public class hotelResources extends BaseTest{
 		Selenium.buttonInDB("productbtn", "product", driver);
 		Selenium.buttonInDB("hotel", "hotel", driver);
 		Selenium.buttonInDB("hotel_hotelinfo", "hotel", driver);
+		Selenium.waitFor(2000);
 		Selenium.buttonInDB("hotel_hotelinfo_search", "hotel", driver);
-		Selenium.waitFor(10000);
+		Selenium.waitFor(15000);
 		hotelid=Selenium.findElementInDB("hotel_hotelinfo_firstid", "hotel", driver).getText().replace(" ", "");
 		Selenium.buttonInDB("productbtn", "product", driver);
 		Selenium.buttonInDB("hotel", "hotel", driver);
 		Selenium.buttonInDB("housetype", "hotel", driver);
 		Selenium.waitFor(3000);
 		Selenium.buttonInDB("housetype_search", "hotel", driver);
-		Selenium.waitFor(10000);
+		Selenium.waitFor(15000);
 		houseid=Selenium.findElementInDB("housetype_firstid", "hotel", driver).getText().replace(" ", "");
 	}
 	
 	@Test(priority=2,description = "搜索所有酒店资源信息")
 	public void searchAllhotelResources() throws SQLException{
+		Selenium.waitFor(3000);
 		Selenium.buttonInDB("productbtn", "product", driver);
+		Selenium.waitFor(2000);
 		Selenium.buttonInDB("hotel", "hotel", driver);
 		Selenium.buttonInDB("hotelresources", "hotel", driver);
-		Selenium.waitFor(2000);
+		Selenium.waitFor(3000);
 		Selenium.buttonInDB("hotelresources_search", "hotel", driver);
-		Selenium.waitFor(15000);
+		Selenium.waitFor(25000);
 		Assert.assertTrue(driver.getPageSource().contains("关联资源"));
 	}
 	@Test(priority=3,description = "新建酒店资源")
@@ -59,7 +62,7 @@ public class hotelResources extends BaseTest{
 		Selenium.inputInDB("hotelresources_add_manage", "hotel", "00T008", driver);
 		Selenium.waitFor(2000);
 		Selenium.findElementInDB("hotelresources_add_manage", "hotel", driver).sendKeys(Keys.ENTER);
-		Selenium.waitFor(2000);
+		Selenium.waitFor(1000);
 //		Selenium.buttonInDB("hotelresources_add_manage_choice", "hotel", driver);
 		Selenium.select("hotelresources_add_resourcesattribute", "hotel", "自签", driver);
 		Selenium.buttonInDB("hotelresources_add_saleyes", "hotel", driver);
@@ -105,7 +108,7 @@ public class hotelResources extends BaseTest{
 		Selenium.select("hotelresources_add_repertory_bulkoperation_hasBreakfast", "hotel", "无早", driver);
 		Selenium.waitFor(2000);
 		Selenium.buttonInDB("hotelresources_add_repertory_bulkoperation_savebtn", "hotel", driver);
-		Selenium.waitFor(15000);
+		Selenium.waitFor(20000);
 		Assert.assertTrue(driver.getPageSource().contains("库存"));
 		
 		
