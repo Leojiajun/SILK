@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -82,6 +83,7 @@ public class productList extends BaseTest{
 		Selenium.buttonInDB("productlist_add_Tripdescription_savebtn", "product", driver);
 		Selenium.waitFor(500);
 		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
+		Selenium.waitFor(2000);
 		//描述信息
 		Selenium.buttonInDB("modifyproduct_descriptor", "product", driver);
 		Selenium.waitFor(3000);
@@ -90,8 +92,22 @@ public class productList extends BaseTest{
 		driver.findElement(By.tagName("body")).sendKeys("产品介绍");
 		Selenium.waitFor(2000);
 		driver.switchTo().defaultContent();//切回来
-		Selenium.waitFor(1000);
-		Selenium.buttonInDB("product_add_descriptor_surebtn", "product", driver);
+		Selenium.waitFor(2000);
+/**		if(Selenium.findElementInDB("product_add_descriptor_surebtn", "product", driver).isDisplayed()==true){
+			System.out.println("可见");
+		}else{
+			System.out.println("不可见");
+		};
+		if(Selenium.findElementInDB("product_add_descriptor_surebtn", "product", driver).isEnabled()==true){
+			System.out.println("可点击");
+		}else{
+			System.out.println("不可点击");
+		};**/
+//      使用js强制点击保存按钮，因为jenkins执行的时候，保存按钮被覆盖，使用click点不到
+		WebElement ele = Selenium.findElementInDB("product_add_descriptor_surebtn", "product", driver);
+		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();", ele);
+//		Selenium.buttonInDB("product_add_descriptor_surebtn", "product", driver);
 		Selenium.waitFor(1000);
 		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
 		//预订控制
@@ -278,6 +294,7 @@ public class productList extends BaseTest{
 		Selenium.buttonInDB("productlist_add_Tripdescription_savebtn", "product", driver);
 		Selenium.waitFor(500);
 		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
+		Selenium.waitFor(2000);
 		//描述信息
 		Selenium.buttonInDB("modifyproduct_descriptor", "product", driver);
 		Selenium.waitFor(3000);
@@ -286,8 +303,15 @@ public class productList extends BaseTest{
 		driver.findElement(By.tagName("body")).sendKeys("产品介绍");
 		Selenium.waitFor(2000);
 		driver.switchTo().defaultContent();//切回来
-		Selenium.waitFor(1000);
-		Selenium.buttonInDB("product_add_descriptor_surebtn", "product", driver);
+		Selenium.waitFor(2000);
+		
+//      使用js强制点击保存按钮，因为jenkins执行的时候，保存按钮被覆盖，使用click点不到
+		WebElement ele = Selenium.findElementInDB("product_add_descriptor_surebtn", "product", driver);
+		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();", ele);
+		
+//		Selenium.buttonInDB("product_add_descriptor_surebtn", "product", driver);
+		
 		Selenium.waitFor(1000);
 		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
 		//预订控制
