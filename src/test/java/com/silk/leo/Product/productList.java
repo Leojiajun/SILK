@@ -44,16 +44,13 @@ public class productList extends BaseTest{
 		Selenium.inputInDB("productlist_add_fromcity", "product", "shangh", driver);
 		Selenium.waitFor(2000);
 		Selenium.findElementInDB("productlist_add_fromcity", "product",  driver).sendKeys(Keys.ENTER);
-//		Selenium.buttonInDB("productlist_add_fromcitychoice", "product", driver);
 		Selenium.waitFor(2000);
 		Selenium.inputInDB("productlist_add_tocity", "product", "beijin", driver);
 		Selenium.waitFor(2000);
 		Selenium.findElementInDB("productlist_add_tocity", "product",  driver).sendKeys(Keys.ENTER);
-//		Selenium.buttonInDB("productlist_add_tocitychoice", "product", driver);
 		Selenium.inputInDB("productlist_add_manager", "product", "00T008", driver);
 		Selenium.waitFor(2000);
 		Selenium.findElementInDB("productlist_add_manager", "product",  driver).sendKeys(Keys.ENTER);
-//		Selenium.buttonInDB("productlist_add_manager_choiceone", "product", driver);
 		Selenium.inputInDB("productlist_add_tripDays", "product", "3", driver);
 		Selenium.inputInDB("productlist_add_tripNights", "product", "2", driver);
 		Selenium.inputInDB("productlist_add_startdata", "product", "2018-11-01", driver);
@@ -61,6 +58,7 @@ public class productList extends BaseTest{
 		Selenium.inputInDB("productlist_add_enddata", "product", "2021-11-01", driver);
 		Selenium.waitFor(2000);
 		Selenium.select("productlist_add_salecurrency", "product", "RMB", driver);
+		Selenium.inputInDB("product_add_ minsaleprice", "product", "20", driver);
 		Selenium.buttonInDB("productlist_add_basicinfo_savebtn", "product", driver);
 		Selenium.waitFor(5000);
 		Selenium.buttonInDB("productlist_add_basicinfo_savebtn", "product", driver);
@@ -77,9 +75,6 @@ public class productList extends BaseTest{
 		Selenium.inputInDB("productlist_add_Tripdescription_firstdaytitle", "product", "第一天行程标题", driver);
 		Selenium.inputInDB("productlist_add_Tripdescription_seconddaytitle", "product", "第二天行程标题", driver);
 		Selenium.inputInDB("productlist_add_Tripdescription_thirddaytitle", "product", "第三天行程标题", driver);
-//		Selenium.inputInDB("productlist_add_Tripdescription_firstdaysubhead", "product", "第一天行程副标题", driver);
-//		Selenium.inputInDB("productlist_add_Tripdescription_seconddaysubhead", "product", "第二天行程副标题", driver);
-//		Selenium.inputInDB("productlist_add_Tripdescription_thirddaysubhead", "product", "第三天行程副标题", driver);
 		Selenium.buttonInDB("productlist_add_Tripdescription_savebtn", "product", driver);
 		Selenium.waitFor(500);
 		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
@@ -272,6 +267,9 @@ public class productList extends BaseTest{
 		Selenium.inputInDB("productlist_add_enddata", "product", "2021-11-01", driver);
 		Selenium.waitFor(2000);
 		Selenium.select("productlist_add_salecurrency", "product", "RMB", driver);
+		Selenium.waitFor(2000);
+		Selenium.inputInDB("product_add_ minsaleprice", "product", "20", driver);
+		Selenium.waitFor(4000);
 		Selenium.buttonInDB("productlist_add_basicinfo_savebtn", "product", driver);
 		Selenium.waitFor(5000);
 		Selenium.buttonInDB("productlist_add_basicinfo_savebtn", "product", driver);
@@ -288,9 +286,6 @@ public class productList extends BaseTest{
 		Selenium.inputInDB("productlist_add_Tripdescription_firstdaytitle", "product", "第一天行程标题", driver);
 		Selenium.inputInDB("productlist_add_Tripdescription_seconddaytitle", "product", "第二天行程标题", driver);
 		Selenium.inputInDB("productlist_add_Tripdescription_thirddaytitle", "product", "第三天行程标题", driver);
-//		Selenium.inputInDB("productlist_add_Tripdescription_firstdaysubhead", "product", "第一天行程副标题", driver);
-//		Selenium.inputInDB("productlist_add_Tripdescription_seconddaysubhead", "product", "第二天行程副标题", driver);
-//		Selenium.inputInDB("productlist_add_Tripdescription_thirddaysubhead", "product", "第三天行程副标题", driver);
 		Selenium.buttonInDB("productlist_add_Tripdescription_savebtn", "product", driver);
 		Selenium.waitFor(500);
 		Assert.assertTrue(driver.getPageSource().contains("操作成功"));

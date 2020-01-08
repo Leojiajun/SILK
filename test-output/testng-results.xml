@@ -1,79 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="3" passed="2">
+<testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="84857" started-at="2019-11-26T06:00:30Z" finished-at="2019-11-26T06:01:54Z">
+  <suite name="Default suite" duration-ms="406603" started-at="2020-01-02T02:31:23Z" finished-at="2020-01-02T02:38:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="84857" started-at="2019-11-26T06:00:30Z" finished-at="2019-11-26T06:01:54Z">
-      <class name="com.silk.leo.Product.hotelInfo">
-        <test-method status="PASS" signature="conect()[pri:0, instance:com.silk.leo.Product.hotelInfo@704a52ec]" name="conect" is-config="true" duration-ms="252" started-at="2019-11-26T14:00:30Z" finished-at="2019-11-26T14:00:30Z">
+    <test name="Default test" duration-ms="406603" started-at="2020-01-02T02:31:23Z" finished-at="2020-01-02T02:38:09Z">
+      <class name="com.silk.leo.Product.productList">
+        <test-method status="PASS" signature="conect()[pri:0, instance:com.silk.leo.Product.productList@5ce81285]" name="conect" is-config="true" duration-ms="268" started-at="2020-01-02T10:31:23Z" finished-at="2020-01-02T10:31:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- conect -->
-        <test-method status="PASS" signature="loadDriver()[pri:0, instance:com.silk.leo.Product.hotelInfo@704a52ec]" name="loadDriver" is-config="true" duration-ms="3718" started-at="2019-11-26T14:00:30Z" finished-at="2019-11-26T14:00:34Z">
+        <test-method status="PASS" signature="loadDriver()[pri:0, instance:com.silk.leo.Product.productList@5ce81285]" name="loadDriver" is-config="true" duration-ms="3645" started-at="2020-01-02T10:31:23Z" finished-at="2020-01-02T10:31:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadDriver -->
-        <test-method status="PASS" signature="loginSilk()[pri:0, instance:com.silk.leo.Product.hotelInfo@704a52ec]" name="loginSilk" duration-ms="1218" started-at="2019-11-26T14:00:34Z" finished-at="2019-11-26T14:00:35Z">
+        <test-method status="PASS" signature="loginSilk()[pri:0, instance:com.silk.leo.Product.productList@5ce81285]" name="loginSilk" duration-ms="1538" started-at="2020-01-02T10:31:27Z" finished-at="2020-01-02T10:31:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginSilk -->
-        <test-method status="FAIL" signature="searchAllHotel()[pri:1, instance:com.silk.leo.Product.hotelInfo@704a52ec]" name="searchAllHotel" duration-ms="18105" started-at="2019-11-26T14:00:35Z" description="搜索所有酒店信息" finished-at="2019-11-26T14:00:53Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at com.silk.leo.Product.hotelInfo.searchAllHotel(hotelInfo.java:21)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.run(TestNG.java:1048)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="searchProduct()[pri:1, instance:com.silk.leo.Product.productList@5ce81285]" name="searchProduct" duration-ms="3416" started-at="2020-01-02T10:31:28Z" description="搜索所有产品信息" finished-at="2020-01-02T10:31:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchAllHotel -->
-        <test-method status="PASS" signature="addHotel()[pri:2, instance:com.silk.leo.Product.hotelInfo@704a52ec]" name="addHotel" duration-ms="60158" started-at="2019-11-26T14:00:53Z" description="新建酒店" finished-at="2019-11-26T14:01:53Z">
+        </test-method> <!-- searchProduct -->
+        <test-method status="PASS" signature="addProduct_freewalker()[pri:2, instance:com.silk.leo.Product.productList@5ce81285]" name="addProduct_freewalker" duration-ms="200408" started-at="2020-01-02T10:31:32Z" description="新建自由行产品" finished-at="2020-01-02T10:34:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addHotel -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.silk.leo.Product.hotelInfo@704a52ec]" name="closeBrowser" is-config="true" duration-ms="1129" started-at="2019-11-26T14:01:53Z" finished-at="2019-11-26T14:01:54Z">
+        </test-method> <!-- addProduct_freewalker -->
+        <test-method status="PASS" signature="addPackageTour()[pri:3, instance:com.silk.leo.Product.productList@5ce81285]" name="addPackageTour" duration-ms="195991" started-at="2020-01-02T10:34:52Z" description="新建跟团游产品" finished-at="2020-01-02T10:38:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addPackageTour -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.silk.leo.Product.productList@5ce81285]" name="closeBrowser" is-config="true" duration-ms="1312" started-at="2020-01-02T10:38:08Z" finished-at="2020-01-02T10:38:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method status="PASS" signature="closeDB()[pri:0, instance:com.silk.leo.Product.hotelInfo@704a52ec]" name="closeDB" is-config="true" duration-ms="1" started-at="2019-11-26T14:01:54Z" finished-at="2019-11-26T14:01:54Z">
+        <test-method status="PASS" signature="closeDB()[pri:0, instance:com.silk.leo.Product.productList@5ce81285]" name="closeDB" is-config="true" duration-ms="1" started-at="2020-01-02T10:38:09Z" finished-at="2020-01-02T10:38:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDB -->
-      </class> <!-- com.silk.leo.Product.hotelInfo -->
+      </class> <!-- com.silk.leo.Product.productList -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

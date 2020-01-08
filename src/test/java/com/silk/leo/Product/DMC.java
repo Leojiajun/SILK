@@ -31,6 +31,7 @@ public class DMC extends BaseTest{
 		Selenium.inputInDB("DMCrsources_add_manager", "DMC", "00T008", driver);
 		Selenium.buttonInDB("DMCrsources_add_manager_choice", "DMC", driver);
 		Selenium.select("DMCrsources_add_property ", "DMC", "自签", driver);
+		Selenium.select("DMCrsources_add_credentialType", "DMC", "无需证件", driver);
 		Selenium.buttonInDB("DMCrsources_add_cansell", "DMC", driver);
 		Selenium.removeAttribute(driver, Selenium.findElementInDB("DMCrsources_add_saleStartDate", "DMC", driver), "readonly");//清除readonly属性
 		Selenium.inputInDB("DMCrsources_add_saleStartDate", "DMC", Selenium.getTodayYYMMDD(), driver);

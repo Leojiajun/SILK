@@ -58,7 +58,7 @@ public class hotelResources extends BaseTest{
 		Selenium.buttonInDB("hotelresources_add_compact", "hotel", driver);
 		Selenium.waitFor(2000);
 		Selenium.buttonInDB("hotelresources_add_compact_choice", "hotel", driver);
-//		Selenium.buttonInDB("hotelresources_add_manage", "hotel", driver);
+		Selenium.select("hotelresources_add_compact_credentialType", "hotel", "无需证件", driver);
 		Selenium.inputInDB("hotelresources_add_manage", "hotel", "00T008", driver);
 		Selenium.waitFor(2000);
 		Selenium.findElementInDB("hotelresources_add_manage", "hotel", driver).sendKeys(Keys.ENTER);

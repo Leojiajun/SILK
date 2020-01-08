@@ -35,6 +35,7 @@ public class playResources extends BaseTest{
 		Selenium.waitFor(2000);
 		Selenium.findElementInDB("play_playresources_add_manager", "play", driver).sendKeys(Keys.ENTER);
 		Selenium.select("play_playresources_add_resourceAttribute", "play", "自签", driver);
+		Selenium.select("play_playresources_add_credentialType", "play", "无需证件", driver);
 		Selenium.waitFor(2000);
 		Selenium.buttonInDB("play_playresources_add_cansell", "play", driver);
 		Selenium.waitFor(2000);
@@ -45,7 +46,7 @@ public class playResources extends BaseTest{
 		Selenium.inputInDB("play_playresources_add_saleStartDate", "play", Selenium.getTodayYYMMDD(), driver);
 		Selenium.waitFor(2000);
 		Selenium.removeAttribute(driver,Selenium.findElementInDB("play_playresources_add_saleEndDate", "play", driver), "readonly");
-		Selenium.inputInDB("play_playresources_add_saleEndDate", "play","2019-12-31", driver);
+		Selenium.inputInDB("play_playresources_add_saleEndDate", "play","2021-12-31", driver);
 		Selenium.waitFor(2000);
 		Selenium.select("play_playresources_add_saleCurrency", "play", "RMB", driver);
 		Selenium.select("play_playresources_add_baseCurrency", "play", "RMB", driver);
@@ -71,7 +72,7 @@ public class playResources extends BaseTest{
 		Selenium.buttonInDB("play_playresources_add_priceofinventory_batch", "play", driver);
 		Selenium.waitFor(3000);
 		Selenium.inputInDB("play_playresources_add_priceofinventory_batch_startdate", "play", Selenium.getTodayYYMMDD(), driver);
-		Selenium.inputInDB("play_playresources_add_priceofinventory_batch_enddate", "play", "2019-12-31", driver);
+		Selenium.inputInDB("play_playresources_add_priceofinventory_batch_enddate", "play", "2020-12-31", driver);
 		Selenium.inputInDB("play_playresources_add_priceofinventory_batch_Addinventoryinput", "play", "50", driver);
 		Selenium.buttonInDB("play_playresources_add_priceofinventory_batch_Addinventorybtn", "play", driver);
 		Selenium.inputInDB("play_playresources_add_priceofinventory_batch_baseAdult", "play", "100", driver);
