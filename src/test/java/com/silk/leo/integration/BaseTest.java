@@ -39,6 +39,7 @@ public class BaseTest {
 		Selenium.inputInDB("loginpage_username", "login", testdata.getTestData("username","integration_login"), driver);
 		Selenium.inputInDB("loginpage_password", "login", testdata.getTestData("password","integration_login"), driver);
 		Selenium.buttonInDB("loginpage_loginbtn", "login", driver);
+		Selenium.waitFor(2000);
 //		String testtext = Selenium.findElementInDB("homepage_verify", "login", driver).getText();
 //		Assert.assertTrue(testtext.contains("首页"));
 //		Selenium.takesScreenshot(driver);

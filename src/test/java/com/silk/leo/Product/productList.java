@@ -22,6 +22,7 @@ public class productList extends BaseTest{
 	
 	@Test(priority=1,description = "搜索所有产品信息")
 	public void searchProduct() throws SQLException{
+		Selenium.waitFor(3000);
 		Selenium.buttonInDB("productbtn", "product", driver);
 		Selenium.buttonInDB("packagebtn", "product", driver);
 		Selenium.buttonInDB("productlistbtn", "product", driver);

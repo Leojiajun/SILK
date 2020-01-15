@@ -33,6 +33,7 @@ public class hotelResources extends BaseTest{
 	
 	@Test(priority=2,description = "搜索所有酒店资源信息")
 	public void searchAllhotelResources() throws SQLException{
+		driver.navigate().refresh();
 		Selenium.waitFor(3000);
 		Selenium.buttonInDB("productbtn", "product", driver);
 		Selenium.waitFor(2000);
