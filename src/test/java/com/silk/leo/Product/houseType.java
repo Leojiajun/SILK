@@ -59,7 +59,7 @@ public class houseType extends BaseTest{
 		Selenium.buttonInDB("hotel_switchpage_surebtn", "hotel", driver);
 		Selenium.waitFor(2000);
 		Selenium.buttonInDB("housetype_add_pictureinfo_add", "hotel", driver);
-		Selenium.waitFor(2000);
+		Selenium.waitFor(4000);
 		Selenium.buttonInDB("housetype_add_pictureinfo_add_firstpicture", "hotel", driver);
 		Selenium.buttonInDB("housetype_add_pictureinfo_add_surebtn", "hotel", driver);
 		Selenium.waitFor(2000);

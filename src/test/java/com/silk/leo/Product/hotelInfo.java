@@ -3,6 +3,7 @@ package com.silk.leo.Product;
 import java.sql.SQLException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -31,11 +32,13 @@ public class hotelInfo extends BaseTest{
 		Selenium.waitFor(2000);
 		Selenium.buttonInDB("hotel_add_brand_choiceone", "hotel", driver);
 		Selenium.select("hotel_add_star", "hotel", "五星", driver);
-		Selenium.buttonInDB("hotel_add_city", "hotel", driver);
+		Selenium.buttonInDB("housetype_add_fkpoi", "hotel", driver);
+		Selenium.waitFor(3000);
+		Selenium.inputInDB("housetype_add_fkpoi",  "hotel", "test酒店1", driver);
+		Selenium.findElementInDB("housetype_add_fkpoi", "hotel", driver).sendKeys(Keys.BACK_SPACE);
+		Selenium.waitFor(3000);
+		Selenium.buttonInDB("housetype_add_fkpoi_chooseone", "hotel", driver);
 		Selenium.waitFor(1000);
-		Selenium.inputInDB("hotel_add_city", "hotel", "shangh", driver);//输入shangh，自动搜索出上海
-		Selenium.waitFor(2000);
-		Selenium.buttonInDB("hotel_add_city_choiceone", "hotel", driver);
 		Selenium.buttonInDB("hotel_add_basicinfo_save", "hotel", driver);
 		Selenium.waitFor(3000);
 		Selenium.buttonInDB("hotel_add_basicinfo_save", "hotel", driver);
@@ -51,6 +54,7 @@ public class hotelInfo extends BaseTest{
 		Selenium.buttonInDB("hotel_add_hotelintroduction_surebtn", "hotel", driver);
 		Selenium.waitFor(500);
 		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
+		Selenium.waitFor(2000);
 		//酒店政策
 		Selenium.buttonInDB("hotel_add_hotelpolicy", "hotel", driver);
 		Selenium.waitFor(2000);
