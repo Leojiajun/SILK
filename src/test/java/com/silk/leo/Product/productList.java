@@ -149,6 +149,7 @@ public class productList extends BaseTest{
 		Selenium.inputInDB("product_add_Associatedresources_add_fromcity", "product", "shangh", driver);
 		Selenium.waitFor(2000);
 		Selenium.findElementInDB("product_add_Associatedresources_add_fromcity", "product", driver).sendKeys(Keys.ENTER);
+		Selenium.waitFor(2000);
 //		Selenium.buttonInDB("product_add_Associatedresources_add_fromcity_choiceshanghai", "product", driver);
 		Selenium.inputInDB("product_add_Associatedresources_add_tocity", "product", "beijin", driver);
 		Selenium.waitFor(2000);
@@ -216,6 +217,8 @@ public class productList extends BaseTest{
 		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
 		//渠道设置
 		Selenium.buttonInDB("modifyproduct_ channelset", "product", driver);
+		Selenium.waitFor(2000);
+		Selenium.buttonInDB("product_add_ channelset_changepagesure", "product", driver);
 		Selenium.waitFor(2000);
 		Selenium.buttonInDB("product_add_ channelset_selectall", "product", driver);
 		Selenium.waitFor(3000);
@@ -406,6 +409,8 @@ public class productList extends BaseTest{
 		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
 		//渠道设置
 		Selenium.buttonInDB("modifyproduct_ channelset", "product", driver);
+		Selenium.waitFor(2000);
+		Selenium.buttonInDB("product_add_ channelset_changepagesure", "product", driver);
 		Selenium.waitFor(2000);
 		Selenium.buttonInDB("product_add_ channelset_selectall", "product", driver);
 		Selenium.waitFor(3000);
