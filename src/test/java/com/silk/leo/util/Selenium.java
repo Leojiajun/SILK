@@ -204,7 +204,7 @@ public class Selenium {
 				logger.info(locatorname+" input success");
 			}catch(Exception e){
 				e.printStackTrace();
-				logger.debug(locatorname+" Failed to input   查看截图");   
+				logger.debug(locatorname+" Failed to input the web element  查看截图");   
 			}
 		}
 	}
@@ -462,7 +462,7 @@ public class Selenium {
 	 * @param date
 	 * @return 当前时间加1天
 	 */
-		public static String getNetDay(Date date){
+		public static String getNextDay(Date date){
 			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 			Calendar calendar=Calendar.getInstance();
 			calendar.setTime(date);
@@ -518,7 +518,7 @@ public class Selenium {
 					Class.forName("com.mysql.cj.jdbc.Driver");
 					    // 建立数据库连接
 					conn = DriverManager.getConnection(
-					        "jdbc:mysql://10.58.12.250:3306/test?useSSL=false", "root", "123456");
+					        "jdbc:mysql://192.168.64.2:3306/test?useSSL=false", "root", "123456");
 					    // 判断数据库连接是否成功
 					if (!conn.isClosed()) {
 					 System.out.println("数据库连接成功");

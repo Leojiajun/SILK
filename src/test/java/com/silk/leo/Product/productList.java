@@ -42,8 +42,8 @@ public class productList extends BaseTest{
 		//基本信息
 		Selenium.inputInDB("productlist_add_subhead", "product", "myTest"+Selenium.getRandomString(5), driver);
 		Selenium.buttonInDB("productlist_add_china", "product", driver);
-		Selenium.inputInDB("productlist_add_fromcity", "product", "shangh", driver);
-		Selenium.waitFor(2000);
+		Selenium.inputInDB("productlist_add_fromcity", "product", "shanghai", driver);
+		Selenium.waitFor(3000);
 		Selenium.findElementInDB("productlist_add_fromcity", "product",  driver).sendKeys(Keys.ENTER);
 		Selenium.waitFor(2000);
 		Selenium.inputInDB("productlist_add_tocity", "product", "beijin", driver);
@@ -64,7 +64,6 @@ public class productList extends BaseTest{
 		Selenium.waitFor(5000);
 		Selenium.buttonInDB("productlist_add_basicinfo_savebtn", "product", driver);
 		Selenium.waitFor(3000);
-//		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
 		//行程描述
 		Selenium.buttonInDB("modifyproduct_Tripdescription", "product", driver);
 		Selenium.waitFor(1000);
@@ -239,6 +238,17 @@ public class productList extends BaseTest{
 		Selenium.waitFor(1000);
 		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
 		Selenium.waitFor(3000);
+		//内部预定须知
+		Selenium.buttonInDB("product_add_ bookinginformation", "product", driver);
+		Selenium.waitFor(3000);
+		Selenium.accessFrame("ueditor_2", driver);
+		Selenium.waitFor(3000);
+		driver.findElement(By.tagName("body")).sendKeys("内部预定须知");
+		driver.switchTo().defaultContent();//切回来
+		Selenium.waitFor(2000);
+		Selenium.buttonInDB("product_add_ bookinginformation_save", "product", driver);
+		Selenium.waitFor(500);
+		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
 		
 	}
 	
@@ -427,6 +437,17 @@ public class productList extends BaseTest{
 		Selenium.waitFor(2000);
 		Selenium.buttonInDB("product_add_ pictureinfo_savebtn", "product", driver);
 		Selenium.waitFor(1000);
+		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
+		//内部预定须知
+		Selenium.buttonInDB("product_add_ bookinginformation", "product", driver);
+		Selenium.waitFor(3000);
+		Selenium.accessFrame("ueditor_2", driver);
+		Selenium.waitFor(3000);
+		driver.findElement(By.tagName("body")).sendKeys("内部预定须知");
+		driver.switchTo().defaultContent();//切回来
+		Selenium.waitFor(2000);
+		Selenium.buttonInDB("product_add_ bookinginformation_save", "product", driver);
+		Selenium.waitFor(500);
 		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
 		
 	}
