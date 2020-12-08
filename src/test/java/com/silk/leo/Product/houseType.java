@@ -33,7 +33,7 @@ public class houseType extends BaseTest{
 		String hotelid = Selenium.findElementInDB("hotel_hotelinfo_firstid", "hotel", driver).getText().replace(" ", "");
 		Selenium.buttonInDB("housetype", "hotel", driver);
 		Selenium.buttonInDB("housetype_add", "hotel", driver);
-		Selenium.inputInDB("housetype_add_housename", "hotel", "house"+Selenium.getRandomString(5), driver);
+		Selenium.inputInDB("housetype_add_housename", "hotel", "house"+Selenium.getRandomString(6), driver);
 		Selenium.inputInDB("housetype_add_hotelID", "hotel", hotelid, driver);
 		Selenium.waitFor(500);       
 		Selenium.buttonInDB("housetype_add_choiceonehotel", "hotel", driver);
