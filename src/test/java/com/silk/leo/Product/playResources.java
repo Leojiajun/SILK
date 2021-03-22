@@ -72,7 +72,7 @@ public class playResources extends BaseTest{
 		Selenium.buttonInDB("play_playresources_add_priceofinventory_batch", "play", driver);
 		Selenium.waitFor(3000);
 		Selenium.inputInDB("play_playresources_add_priceofinventory_batch_startdate", "play", Selenium.getTodayYYMMDD(), driver);
-		Selenium.inputInDB("play_playresources_add_priceofinventory_batch_enddate", "play", "2020-12-31", driver);
+		Selenium.inputInDB("play_playresources_add_priceofinventory_batch_enddate", "play", "2021-12-31", driver);
 		Selenium.inputInDB("play_playresources_add_priceofinventory_batch_Addinventoryinput", "play", "50", driver);
 		Selenium.buttonInDB("play_playresources_add_priceofinventory_batch_Addinventorybtn", "play", driver);
 		Selenium.inputInDB("play_playresources_add_priceofinventory_batch_baseAdult", "play", "100", driver);

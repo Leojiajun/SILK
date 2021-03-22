@@ -20,7 +20,7 @@ public class hotelResources extends BaseTest{
 		Selenium.buttonInDB("hotel_hotelinfo", "hotel", driver);
 		Selenium.waitFor(2000);
 		Selenium.buttonInDB("hotel_hotelinfo_search", "hotel", driver);
-		Selenium.waitFor(15000);
+		Selenium.waitFor(30000);
 		hotelid=Selenium.findElementInDB("hotel_hotelinfo_firstid", "hotel", driver).getText().replace(" ", "");
 		Selenium.buttonInDB("productbtn", "product", driver);
 		Selenium.buttonInDB("hotel", "hotel", driver);
@@ -29,6 +29,7 @@ public class hotelResources extends BaseTest{
 		Selenium.buttonInDB("housetype_search", "hotel", driver);
 		Selenium.waitFor(15000);
 		houseid=Selenium.findElementInDB("housetype_firstid", "hotel", driver).getText().replace(" ", "");
+//		System.out.println(hotelid+houseid);
 	}
 	
 	@Test(priority=2,description = "搜索所有酒店资源信息")
@@ -66,6 +67,7 @@ public class hotelResources extends BaseTest{
 		Selenium.waitFor(1000);
 //		Selenium.buttonInDB("hotelresources_add_manage_choice", "hotel", driver);
 		Selenium.select("hotelresources_add_resourcesattribute", "hotel", "自签", driver);
+		Selenium.select("hotelresources_add_TS", "hotel", "TS", driver);
 		Selenium.buttonInDB("hotelresources_add_saleyes", "hotel", driver);
 		//售卖信息
 		Selenium.buttonInDB("hotelresources_add_salestartdata", "hotel", driver);
@@ -95,11 +97,11 @@ public class hotelResources extends BaseTest{
 		Selenium.buttonInDB("hotelresources_add_repertory_bulkoperation", "hotel", driver);
 		Selenium.waitFor(2000);
 		Selenium.buttonInDB("hotelresources_add_repertory_bulkoperation_startdata", "hotel", driver);
-		Selenium.inputInDB("hotelresources_add_repertory_bulkoperation_startdata", "hotel", "2018-11-01", driver);
+		Selenium.inputInDB("hotelresources_add_repertory_bulkoperation_startdata", "hotel", "2021-01-01", driver);
 //		Selenium.buttonInDB("hotelresources_add_repertory_bulkoperation_startdata_choice", "hotel", driver);
 		Selenium.waitFor(2000);
 		Selenium.buttonInDB("hotelresources_add_repertory_bulkoperation_enddata", "hotel", driver);
-		Selenium.inputInDB("hotelresources_add_repertory_bulkoperation_enddata", "hotel", "2020-12-31", driver);
+		Selenium.inputInDB("hotelresources_add_repertory_bulkoperation_enddata", "hotel", "2021-05-30", driver);
 //		Selenium.buttonInDB("hotelresources_add_repertory_bulkoperation_enddata_choice", "hotel", driver);
 		Selenium.waitFor(2000);
 		Selenium.inputInDB("hotelresources_add_repertory_bulkoperation_add", "hotel", "50", driver);

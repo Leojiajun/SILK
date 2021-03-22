@@ -54,6 +54,7 @@ public class productList extends BaseTest{
 		Selenium.findElementInDB("productlist_add_manager", "product",  driver).sendKeys(Keys.ENTER);
 		Selenium.inputInDB("productlist_add_tripDays", "product", "3", driver);
 		Selenium.inputInDB("productlist_add_tripNights", "product", "2", driver);
+		Selenium.select("product_add_bussinessType", "product", "主题亲子", driver);
 		Selenium.inputInDB("productlist_add_startdata", "product", "2018-11-01", driver);
 		Selenium.waitFor(2000);
 		Selenium.inputInDB("productlist_add_enddata", "product", "2021-11-01", driver);
@@ -194,8 +195,8 @@ public class productList extends BaseTest{
 		Selenium.waitFor(3000);
 		Selenium.buttonInDB("product_add_ priceofinventory_setrule", "product", driver);
 		Selenium.waitFor(2000);
-		Selenium.inputInDB("product_add_ priceofinventory_setrule_enddate", "product", "2020-12-30", driver);
-		Selenium.inputInDB("product_add_ priceofinventory_setrule_suggestPriceMarkup", "product", "10", driver);
+		Selenium.inputInDB("product_add_ priceofinventory_setrule_enddate", "product", "2021-05-30", driver);
+//		Selenium.inputInDB("product_add_ priceofinventory_setrule_suggestPriceMarkup", "product", "10", driver);
 		Selenium.buttonInDB("product_add_ priceofinventory_setrule_suggestPriceFlag", "product", driver);
 		Selenium.waitFor(2000);
 		Selenium.buttonInDB("product_add_ priceofinventory_setrule_refreshSalePriceType", "product", driver);
@@ -276,6 +277,7 @@ public class productList extends BaseTest{
 //		Selenium.buttonInDB("productlist_add_manager_choiceone", "product", driver);
 		Selenium.inputInDB("productlist_add_tripDays", "product", "3", driver);
 		Selenium.inputInDB("productlist_add_tripNights", "product", "2", driver);
+		Selenium.select("product_add_bussinessType", "product", "主题亲子", driver);
 		Selenium.inputInDB("productlist_add_startdata", "product", "2018-11-01", driver);
 		Selenium.waitFor(2000);
 		Selenium.inputInDB("productlist_add_enddata", "product", "2021-11-01", driver);
@@ -397,8 +399,8 @@ public class productList extends BaseTest{
 		Selenium.waitFor(3000);
 		Selenium.buttonInDB("product_add_ priceofinventory_setrule", "product", driver);
 		Selenium.waitFor(2000);
-		Selenium.inputInDB("product_add_ priceofinventory_setrule_enddate", "product", "2020-12-30", driver);
-		Selenium.inputInDB("product_add_ priceofinventory_setrule_suggestPriceMarkup", "product", "10", driver);
+		Selenium.inputInDB("product_add_ priceofinventory_setrule_enddate", "product", "2021-05-30", driver);
+//		Selenium.inputInDB("product_add_ priceofinventory_setrule_suggestPriceMarkup", "product", "10", driver);
 		Selenium.buttonInDB("product_add_ priceofinventory_setrule_suggestPriceFlag", "product", driver);
 		Selenium.waitFor(2000);
 		Selenium.buttonInDB("product_add_ priceofinventory_setrule_refreshSalePriceType", "product", driver);
