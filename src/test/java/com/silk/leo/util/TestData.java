@@ -74,7 +74,7 @@ public class TestData {
 		
 
 		
-		System.out.println(a.getTestData("username", "tc1")+":"+a.getTestData("password", "tc1"));
+		System.out.println(a.getTestData("username", "integration_login")+":"+a.getTestData("password", "integration_login"));
 		
 	}
 }

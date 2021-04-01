@@ -3,15 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.silk.leo.Product.hotelInfo">
+      <class name="com.silk.elo.datadriver.TestDataDriverByCSVFile">
         <methods>
-          <include name="conect"/>
-          <include name="loadDriver"/>
-          <include name="closeDB"/>
           <include name="closeBrowser"/>
-          <include name="addHotel"/>
+          <include name="loadDriver"/>
+          <include name="testSearch" invocation-numbers="0 3"/>
         </methods>
-      </class> <!-- com.silk.leo.Product.hotelInfo -->
+      </class> <!-- com.silk.elo.datadriver.TestDataDriverByCSVFile -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

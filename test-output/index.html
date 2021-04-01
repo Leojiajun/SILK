@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\leo.wu\AppData\Local\Temp\testng-eclipse--756300114\testng-customsuite.xml</span>
+                    <span>C:\Users\leo.wu\AppData\Local\Temp\testng-eclipse--961126785\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">4 methods, 2 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.silk.elo.datadriver.TestDataDriverByCSVFile" hash-for-method="testSearch(蝙蝠侠, 女主角, 克尔斯滕)">testSearch(蝙蝠侠, 女主角, 克尔斯滕)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.silk.elo.datadriver.TestDataDriverByCSVFile" hash-for-method="testSearch(光荣之路, 上映日期, 2006/1/13)">testSearch(光荣之路, 上映日期, 2006/1/13)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,17 +120,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.silk.leo.Product.hotelInfo" hash-for-method="addHotel">addHotel</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.silk.elo.datadriver.TestDataDriverByCSVFile" hash-for-method="testSearch(a, b, ab)">testSearch(a, b, ab)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.silk.leo.Product.hotelInfo" hash-for-method="loginSilk">loginSilk</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.silk.leo.Product.hotelInfo" hash-for-method="searchAllHotel">searchAllHotel</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.silk.elo.datadriver.TestDataDriverByCSVFile" hash-for-method="testSearch(超人, 主演, 克里斯托弗)">testSearch(超人, 主演, 克里斯托弗)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -126,35 +140,114 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.silk.leo.Product.hotelInfo</span>
+              <img src="failed.png"/>
+              <span class="class-name">com.silk.elo.datadriver.TestDataDriverByCSVFile</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="addHotel">
-                  </a> <!-- addHotel -->
-                  <span class="method-name">addHotel</span>
-                  <em>
-(新建酒店)                  </em>
+                  <a name="testSearch(蝙蝠侠, 女主角, 克尔斯滕)">
+                  </a> <!-- testSearch(蝙蝠侠, 女主角, 克尔斯滕) -->
+                  <span class="method-name">testSearch</span>
+                  <span class="parameters">(蝙蝠侠, 女主角, 克尔斯滕)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at com.silk.elo.datadriver.TestDataDriverByCSVFile.testSearch(TestDataDriverByCSVFile.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="loginSilk">
-                  </a> <!-- loginSilk -->
-                  <span class="method-name">loginSilk</span>
+                  <a name="testSearch(光荣之路, 上映日期, 2006/1/13)">
+                  </a> <!-- testSearch(光荣之路, 上映日期, 2006/1/13) -->
+                  <span class="method-name">testSearch</span>
+                  <span class="parameters">(光荣之路, 上映日期, 2006/1/13)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at com.silk.elo.datadriver.TestDataDriverByCSVFile.testSearch(TestDataDriverByCSVFile.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:137)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:58)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.silk.elo.datadriver.TestDataDriverByCSVFile</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSearch(a, b, ab)">
+                  </a> <!-- testSearch(a, b, ab) -->
+                  <span class="method-name">testSearch</span>
+                  <span class="parameters">(a, b, ab)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="searchAllHotel">
-                  </a> <!-- searchAllHotel -->
-                  <span class="method-name">searchAllHotel</span>
-                  <em>
-(搜索所有酒店信息)                  </em>
+                  <a name="testSearch(超人, 主演, 克里斯托弗)">
+                  </a> <!-- testSearch(超人, 主演, 克里斯托弗) -->
+                  <span class="method-name">testSearch</span>
+                  <span class="parameters">(超人, 主演, 克里斯托弗)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -162,7 +255,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\leo.wu\AppData\Local\Temp\testng-eclipse--756300114\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\leo.wu\AppData\Local\Temp\testng-eclipse--961126785\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -171,7 +264,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.silk.leo.Product.hotelInfo&quot;/&gt;
+      &lt;class name=&quot;com.silk.elo.datadriver.TestDataDriverByCSVFile&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -211,24 +304,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'addHotel')
-data.setCell(0, 2, 'com.silk.leo.Product.hotelInfo')
-data.setCell(0, 3, 87165);
+data.setCell(0, 1, 'testSearch')
+data.setCell(0, 2, 'com.silk.elo.datadriver.TestDataDriverByCSVFile')
+data.setCell(0, 3, 7587);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'searchAllHotel')
-data.setCell(1, 2, 'com.silk.leo.Product.hotelInfo')
-data.setCell(1, 3, 33878);
+data.setCell(1, 1, 'testSearch')
+data.setCell(1, 2, 'com.silk.elo.datadriver.TestDataDriverByCSVFile')
+data.setCell(1, 3, 6167);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'loginSilk')
-data.setCell(2, 2, 'com.silk.leo.Product.hotelInfo')
-data.setCell(2, 3, 3321);
+data.setCell(2, 1, 'testSearch')
+data.setCell(2, 2, 'com.silk.elo.datadriver.TestDataDriverByCSVFile')
+data.setCell(2, 3, 6077);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testSearch')
+data.setCell(3, 2, 'com.silk.elo.datadriver.TestDataDriverByCSVFile')
+data.setCell(3, 3, 5807);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <span class="suite-total-time">Total running time: 25 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -254,34 +351,34 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.silk.leo.Product.hotelInfo</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">conect</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
+              <div class="chronological-class-name">com.silk.elo.datadriver.TestDataDriverByCSVFile</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">loadDriver</span>
-                <span class="method-start">384 ms</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">loginSilk</span>
-                <span class="method-start">4353 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testSearch(光荣之路, 上映日期, 2006/1/13)</span>
+                <span class="method-start">3895 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">searchAllHotel</span>
-                <span class="method-start">7676 ms</span>
+                <span class="method-name">testSearch(a, b, ab)</span>
+                <span class="method-start">11485 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">addHotel</span>
-                <span class="method-start">41556 ms</span>
+                <span class="method-name">testSearch(超人, 主演, 克里斯托弗)</span>
+                <span class="method-start">17656 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testSearch(蝙蝠侠, 女主角, 克尔斯滕)</span>
+                <span class="method-start">23467 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">128723 ms</span>
-              </div> <!-- configuration-class after -->
-              <div class="configuration-class after">
-                <span class="method-name">closeDB</span>
-                <span class="method-start">129613 ms</span>
+                <span class="method-start">29548 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
