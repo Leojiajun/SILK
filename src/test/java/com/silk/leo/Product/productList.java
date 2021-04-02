@@ -79,7 +79,7 @@ public class productList extends BaseTest{
 		Selenium.buttonInDB("productlist_add_Tripdescription_savebtn", "product", driver);
 		Selenium.waitFor(500);
 		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
-		Selenium.waitFor(2000);
+		Selenium.waitFor(5000);
 		//描述信息
 		Selenium.buttonInDB("modifyproduct_descriptor", "product", driver);
 		Selenium.waitFor(3000);
@@ -305,7 +305,7 @@ public class productList extends BaseTest{
 		Selenium.buttonInDB("productlist_add_Tripdescription_savebtn", "product", driver);
 		Selenium.waitFor(500);
 		Assert.assertTrue(driver.getPageSource().contains("操作成功"));
-		Selenium.waitFor(2000);
+		Selenium.waitFor(5000);
 		//描述信息
 		Selenium.buttonInDB("modifyproduct_descriptor", "product", driver);
 		Selenium.waitFor(3000);
